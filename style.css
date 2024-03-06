@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+html {
+    text-align: center;
+}
+
+.test-class {
+    width: 100dvw;
+    padding-top: 30dvw;
+    padding-bottom: 30dvw;
+}
+
+#count-up {
+    font-size: 40px;
+}
+
+.gradation01 {
+    position: relative;
+    overflow: hidden;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #FFD700;
+}
+.item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+
+    /* 回転アニメーション */
+    transform-origin: 0 0;
+    animation-name: rotate-item;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.item-01 {
+    z-index: 3;
+    animation-duration: 15s;
+}
+.item-02 {
+    z-index: 2;
+    left: 45%;
+    animation-duration: 50s;
+    animation-direction: reverse;
+}
+.item-03 {
+    z-index: 4;
+    left: 40%;
+    animation-duration: 8s;
+}
+.item-04 {
+    z-index: 1;
+    animation-duration: 10s;
+}
+.round {
+    position: relative;
+    border-radius: 50%;
+}
+.round-01 {
+    z-index: 3;
+    top: 0%;
+    width: 18vw;
+    height: 18vw;
+    background: #007AFF;
+    filter: blur(50px);
+    animation: flash 2s linear infinite;
+}
+.round-02 {
+    top: -20%;
+    width: 40dvw;
+    height: 40dvw;
+    background-color: #FF3B30;
+    filter: blur(80px);
+    animation: flash 2s linear infinite;
+}
+.round-03{
+    top: 0%;
+    width: 20vw;
+    height: 20vw;
+    background-color: #20B9D6;
+    filter: blur(60px);
+    animation: flash 10s linear infinite;
+}
+.round-04{
+    top: -70%;
+    left: -60%;
+    width: 40vw;
+    height: 40vw;
+    background-color: #FCC700;
+    filter: blur(150px);
+    animation: flash 10s linear infinite;
+}
+
+  /* 回転アニメーション */
+@keyframes rotate-item {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+  /* 点滅アニメーション */
+@keyframes flash {
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
