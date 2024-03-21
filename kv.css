@@ -1,0 +1,45 @@
+.kv-container{
+  width: 100dvw;
+  height: 100dvh;
+  position: relative;
+}
+.kv-character {
+  position: absolute;
+  top: 50dvh;
+  left: 50dvw;
+  transform: translate(-50% , -50%);
+  width: 140%;
+  object-fit: cover;
+  z-index: -99;
+}
+.kv-character-sp {
+  position: absolute;
+  top: 50dvh;
+  left: 50dvw;
+  transform: translate(-50% , -50%);
+  width: 200%;
+  object-fit: contain;
+  z-index: -99;
+}
+@media screen (max-width: 900px) {
+  .kv-character {
+    width: 100dvw;
+  }
+}
+.kv-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: -100;
+}
+.kv-bg-sp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvh;
+  height: 100dvw;
+  z-index: -100;
+  rotate: 90deg;
+}

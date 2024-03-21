@@ -1,0 +1,10 @@
+#js-btn-goiken-box {
+  display: flex;
+  width: 400px;
+  height: 100px;
+  padding: 10px 55px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}

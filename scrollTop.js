@@ -1,17 +1,18 @@
 'use strict';
 
+//ボタン
 const btn = document.querySelector('#js-btn-scrollTop');
-
-btn.addEventListener("click", () => {
-  console.log("クリックされています");
-
-  // #btn 要素までのオフセットを取得
-  const offsetTop = document.querySelector('#header').offsetTop;
-
-  // スムーススクロールで指定位置まで移動
-  window.scroll({
-    top: offsetTop,
-    behavior: "smooth",
-  });
+//クリックイベントを追加
+btn.addEventListener( 'click' , () => {
+  window.scroll({top: 0, behavior: 'smooth'});
 });
-
+//スクロール時のイベントを追加
+window.addEventListener( 'scroll' , () => {
+  if(window.scrollY > 800){
+    btn.style.opacity = '1';
+    btn.style.transition = 'ease-in-out .4s';
+  }else	if(window.scrollY < 400){
+    btn.style.opacity = '0';
+    btn.style.transition = 'ease-in-out .4s';
+  }
+});

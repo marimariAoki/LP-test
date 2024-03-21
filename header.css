@@ -1,0 +1,36 @@
+#js-header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  transition: transform .4s .4s;
+}
+#js-header.hidden {
+  transform: translateY(-100px);
+  transition: ease-in-out .8s;
+}
+.header-container {
+  margin: 0 auto;
+  padding: 1em 0;
+  width: calc(100% - 160px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  width: 100px;
+}
+.header-menu {
+  display: flex;
+  column-gap: 1em;
+  list-style: none;
+}
+.header-menu a {
+  text-decoration: none;
+  color: #212121;
+  transition: ease-in-out .8s;
+}
+.header-menu a:hover {
+  opacity: .5;
+  transition: ease-in-out .8s;
+}
